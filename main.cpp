@@ -19,7 +19,9 @@ int main()
         //parse input into vector of tokens
         std::vector<std::string> argv = parseCommand(input);
         if (argv.empty()) continue;
-        
+
+        if (argv[0] == "exit" || argv[0] == "quit") break; //exit check
+
         //check command against whitelist
         if (!isSupportedCommand(argv[0]))
         {
@@ -35,7 +37,6 @@ int main()
         }
         std::cout << std::endl;
 
-        if (argv[0] == "exit" || argv[0] == "quit") break;
     }
 
     std::cout << "myShell has exited\n"; //exit message
