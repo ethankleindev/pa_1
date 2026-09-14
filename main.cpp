@@ -5,7 +5,6 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <windows.h>
 
 int main()
 {
@@ -28,7 +27,7 @@ int main()
         //check command against whitelist
         if (!isSupportedCommand(argv[0]))
         {
-            std::cout << "Command not supported\n" << argv[0] << "\n";
+            std::cout << "Command not supported: " << argv[0] << "\n";
             continue;
         }
        //allocates memory for args to pass to child thread
