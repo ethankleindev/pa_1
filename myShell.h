@@ -1,4 +1,5 @@
 // Ethan Klein
+//Gerson Mancia
 
 #ifndef MYSHELL_H
 #define MYSHELL_H
