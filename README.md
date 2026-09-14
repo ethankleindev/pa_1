@@ -79,5 +79,5 @@ The Following Windows operating system commands are supported:
 9. Team Contributions
 ========================================================================
 -Ethan Klein
--Gerson Mancia: Added comments to describe how functions worked, worked on 1 bug fix in main, created threading sections in main.cpp and also on created the helper function commandThread and helped a minor bug fix on isSupportedCommand on myShell.cpp, added the necessary libraries in myShell.h and also wrote section 1, 2, 5, 6 and 9 of this README file.
+-Gerson Mancia: Added comments to describe how functions worked(the ones on the side), worked on 1 bug fix in main, created threading sections in main.cpp and also on created the helper function commandThread and helped a minor bug fix on isSupportedCommand on myShell.cpp, added the necessary libraries in myShell.h and also wrote section 1, 2, 5, 6 and 9 of this README file.
   
