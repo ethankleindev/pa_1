@@ -1,4 +1,6 @@
 // Ethan Klein
+//Gerson Mancia
+
 #include "myShell.h"
 #include <iostream>
 #include <string>
