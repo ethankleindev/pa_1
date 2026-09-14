@@ -39,11 +39,11 @@ bool isSupportedCommand(const std::string& command)
 
 DWORD WINAPI commandThread(LPVOID lpParam)
 {
-    auto args = static_cast<std::vector<std::string>*>(lpParam);    //copies all the information from lpParam and stores each word into a vector, it does this with a pointer to access each individual cell
+    auto args = static_cast<std::vector<std::string>*>(lpParam);    //copies all the information from lpParam's address and stores each word into a vector, it does this with a pointer to access each individual cell
     if (args != nullptr && !args->empty())
     {
         std::string fullCommand = "";
-        for (size_t i = 0; i < args-> size(); ++i)      // gets each individual character in the lpParam and copies them to store the command
+        for (size_t i = 0; i < args-> size(); ++i)      // gets each individual word in the lpParam and copies them to store the command
             {
                 fullCommand += (*args)[i];
                 if(i < args-> size() - 1)
