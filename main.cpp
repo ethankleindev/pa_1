@@ -25,7 +25,8 @@ int main()
         //check command against whitelist
         if (!isSupportedCommand(argv[0]))
         {
-            std::cout << "Command not supported\n";
+            std::cout << "Command not supported\n" << argv[0] << "\n";
+            continue;
         }
 
         // testing, prints argv vector
