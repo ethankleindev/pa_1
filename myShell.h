@@ -9,6 +9,6 @@
 
 std::vector<std::string> parseCommand(const std::string&);
 bool isSupportedCommand(const std::string&);
-DWORD WINAPI commandThread(LPVOID lpParam); //Tells the compiler that commandThread exists and matches the exact signature required by CreateTheread()    
+DWORD WINAPI commandThread(LPVOID lpParam); //Tells the compiler that commandThread exists and matches the signature required by CreateTheread()    
 
 #endif
