@@ -1,5 +1,8 @@
 // Ethan Klein
-//Gerson Mancia
+// Gerson Mancia
+// Xammy Yang
+// Chris Jose
+// Brian Nguyen
 // Programming Assignment 1
 
 #include "myShell.h"
