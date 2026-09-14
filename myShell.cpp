@@ -3,6 +3,7 @@
 
 #include "myShell.h"
 #include <cstring>
+#include <cstdlib>
 
 
 std::vector<std::string> parseCommand(const std::string& input)
