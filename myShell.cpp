@@ -15,7 +15,7 @@ std::vector<std::string> parseCommand(const std::string& input)
     while (argumentVector.size() < 4 && token != nullptr)  // as in if we pass an argument "dir" fgets(); will read it as "dir\n" literally
     {                                                      //in the buffer. We want to make sure that strtok will remove \r and \n. \r
         argumentVector.push_back(token);                  // makes it so the cursor moves to the beginning of a line, and \n moves it down
-        token = strtok(nullptr, " \t");                  // a row. 
+        token = strtok(nullptr, " \t");                  // a row. In certain OS's it will send "dir\r\n" and this will make it filter it out 
     }
     return argumentVector;
 }
