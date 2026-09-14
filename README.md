@@ -2,7 +2,7 @@
 1. Student/Group Information
 ========================================================================
 Group #7
-Names: Ethan Klein, Gerson Mancia
+Names: Ethan Klein, Gerson Mancia, Xammy Yang, Brain Nguyen, Chris Jose
 Course/Section: Operating Sytems
 Assignment: Programming  Assignment 1- Command Line Interpreter (MyShell)
 
