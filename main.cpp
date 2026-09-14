@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <windows.h>
 
 int main()
 {
@@ -30,18 +31,26 @@ int main()
             std::cout << "Command not supported\n" << argv[0] << "\n";
             continue;
         }
+       //allocates memory for args to pass to child thread
+       auto threadArgs = new std::vector<std::string>(argv);
 
-        // testing, prints argv vector
-        size_t i = 0;
-        while (i < argv.size())
-        {
-            std::cout << argv[i] << " ";
-            ++i;
-        }
-        std::cout << std::endl;
+       //Spawn child worker thread
+       HANDLE hThread = CreateThread(NULL, 0, commandThread, threadArgs, 0, NULL);
 
+       if(hThread == NULL)
+       {
+          std::cout << "Error creating child thread.\n";
+          delete threadArgs;                                    //prevents memory leaks
+          continue;                                             //skips this section to continue loop again
+       }
+
+       //Wait for child thread execution to finish
+       WaitForSingleObject(hThread, INFINITE);
+
+       //Close thread handle
+       CloseHandle(hThread);
     }
 
-    std::cout << "myShell has exited\n"; //exit message
+    std::cout << "Thanks for using myShell!\n"; //exit message
     return 0;
 }
