@@ -137,8 +137,15 @@ since we only check the command name and not the arguments.
 ========================================================================
 8. Known Limitations
 ========================================================================
-
 myShell can only be run on windows as it relays on the <windows.h> header file for threading the commands to the shell. 
+
+The shell only supports a fixed whitelist of commands: dir, help, vol, path, tasklist, notepad, echo, color, ping. Other valid Windows commands cannot be executed. 
+
+Input is set to a max of 255 characters and commands are limited to 4 tokens total(1 command and up to 3 arguments).
+
+Quoted arguments are not supported. 
+
+Shell operators such as &, |, <, >, ^, %, and ! are not supported.
 
 ========================================================================
 9. Team Contributions
