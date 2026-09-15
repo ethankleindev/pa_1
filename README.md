@@ -45,7 +45,7 @@ in the same folder.
 ========================================================================
 From a Windows command prompt, in the folder containing myShell.exe:
     myShell.exe
-The shell prints "Welcome to myShell", then displays the "==> " prompt and waits for input. Type a supported command and press Enter. Type exit to terminate.
+The shell prints "Welcome to myShell", then displays the "==> " prompt and waits for input. Type a supported command and press Enter. Type exit or quit to terminate.
  
 myShell.exe can also be launched by double clicking it in File Explorer, but running it from an existing command prompt is recommended so the window stays open after the shell exits.
 
@@ -88,7 +88,7 @@ All tests were run on Windows 11 using myShell.exe built with g++.
 Test 1: dir
 Typed dir with no arguments. It printed the directory listing for
 C:\pa1\pa_1-main, then the prompt came back.
-See Screenshot 1.
+See Screenshot 1 in Screenshots_Evidence.pdf
  
 Test 2: ping 192.168.1.1
 Typed ping with one argument. It printed the four ping attempts and the
@@ -96,35 +96,35 @@ statistics at the end. All four timed out because that address is not on our
 network, which is normal ping behavior and not a problem with the shell. The
 prompt did not come back until ping was finished, so the parent really is
 waiting on the child thread.
-See Screenshot 2.
+See Screenshot 2 in Screenshots_Evidence.pdf
  
 Test 3: echo Hello World
 Typed a command with two arguments. It printed Hello World. The parser split
 this into echo, Hello, and World, which is 3 tokens and under our 4 token
 limit.
-See Screenshot 3.
+See Screenshot 3 in Screenshots_Evidence.pdf
  
 Test 4: invalidCommand
 Typed a command that is not on the whitelist. The shell printed
 "Command not supported: invalidCommand" and went back to the prompt. It did
 not create a thread and it did not crash.
-See Screenshot 4.
+See Screenshot 4 in Screenshots_Evidence.pdf
  
 Test 5: vol then path
 Ran two valid commands back to back. vol printed the volume name and serial
 number, then path printed the PATH variable. The shell kept working fine after
 the first thread finished.
-See Screenshot 5.
+See Screenshot 5 in Screenshots_Evidence.pdf
  
 Test 6: color 0A
 The console turned green on black and printed nothing, which is what color
 does when it works.
-See Screenshot 6.
+See Screenshot 6 in Screenshots_Evidence.pdf
  
 Test 7: exit
 The shell printed "Thanks for using myShell!" and closed. No thread is created
 for exit because the exit check happens before the whitelist check.
-See Screenshot 7.
+See Screenshot 7 in Screenshots_Evidence.pdf
  
 We also tested quit and it did the same thing as exit.
  
