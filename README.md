@@ -150,4 +150,6 @@ compiles with no errors or warnings. Ran all of the required test cases (no
 arguments, one argument, multiple arguments, invalid command, two commands in
 a row, color, and exit/quit), took and labeled Screenshots 1 through 7, and
 wrote sections 3, 4, and 7 of this README.
+-Brian Nguyen: Added input checks to reject commands that are too long, have too many arguments, or contain unsupported
+symbols. Also made the shell stop when input ends and added comments to explain how the code works.
   
