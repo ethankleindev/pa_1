@@ -136,9 +136,9 @@ since we only check the command name and not the arguments.
 
 ========================================================================
 8. Known Limitations
-myShell can only be run on windows as it relays on the <windows.h> header file for threading the commands to the shell. 
 ========================================================================
 
+myShell can only be run on windows as it relays on the <windows.h> header file for threading the commands to the shell. 
 
 ========================================================================
 9. Team Contributions
