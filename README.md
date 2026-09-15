@@ -136,13 +136,14 @@ since we only check the command name and not the arguments.
 
 ========================================================================
 8. Known Limitations
+myShell can only be run on windows as it relays on the <windows.h> header file for threading the commands to the shell. 
 ========================================================================
 
 
 ========================================================================
 9. Team Contributions
 ========================================================================
--Ethan Klein
+-Ethan Klein: Created the repo and set up the base welcome message, input and exit check. Designed and implemented parseCommand() and isCommandSupported(). 
 -Gerson Mancia: Added comments to describe how functions worked(the ones on the side), worked on 1 bug fix in main, created threading sections in main.cpp and also created the helper function commandThread and helped a minor bug fix on isSupportedCommand on myShell.cpp, added the necessary libraries in myShell.h and also wrote section 1, 2, 5, 6 and 9 of this README file.
 -Chris Jose: Set up the g++ build environment and confirmed the program
 compiles with no errors or warnings. Ran all of the required test cases (no
